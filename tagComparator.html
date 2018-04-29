@@ -1,0 +1,137 @@
+<!doctype html>  
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  
+  <title>Intelligent Viz</title>
+
+  <link rel="shortcut icon" href="/favicon.ico">
+ 	<link rel="stylesheet" href="style.css">  
+  <link href='https://fonts.googleapis.com/css?family=Caudex' rel='stylesheet'>
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.3/modernizr.min.js"></script>
+ 
+ 
+  <style type="text/css">
+   body{
+    font-family: "Caudex";
+    background-image: url("wallpaper_7.jpg");
+    
+  }
+
+  #main { 
+
+    width: 510px;    
+  }
+ 
+    #lineChartHolder {
+    width: 500px;
+    background: #ffffff;
+    height: 300px;
+    float: left;
+    
+}
+  
+    
+    .axis path,
+    .axis line {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
+    }
+    
+    .x.axis path {
+      display: none;
+    }
+    
+    .line {
+      fill: none;
+      stroke: steelblue;
+      stroke-width: 1.5px;
+    }
+  
+
+
+  </style>
+
+
+</head>
+
+<body class="cf">
+    <script src="http://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+    <script>
+    d3version4 = d3
+    window.d3 = null
+    </script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+     <script>
+    d3version3 = d3
+    window.d3 =null
+    </script>
+   <script src ="bubbleChart_2.js" type="text/javascript"></script>
+   <script src ="donutChart.js"></script>
+   
+
+  <header class="span2">
+  	<div class="inner cf">
+  		<h1 class="alt span1" style="font-size: 32px;">Taggit
+     </h1>
+  	<nav class="span1 col">
+			<ul class="cf">
+				<li><a class="alt" href="index.html">Quality Viewer</a></li>
+				<li><a class="alt active" href="#">Tag Comparator</a></li>
+        <li> <img src="stackOverflow.jpg" width ="170px" height="35px" /></li>
+				
+			</ul>
+		</nav>
+	</div>
+  </header>
+
+  <div id="container" class="cf">  
+
+  	<article class="span1">
+				<section>
+          
+           <svg width="550" height="550" font-family="Caudex" font-size="10" text-anchor="middle"></svg>
+          <div id="chartHolder">
+
+            <script src ="bubbleChart_2.js"></script>
+
+           </div>
+
+          
+        </section>
+      
+			</article>
+
+			<aside class="span1 col">					
+           <div id ="questionDisplay"></div>
+           
+                 
+           <div id="qDisplay" style="border : solid 1px #000000; background : #ffffff; color : #000000; padding : 4px; width : 500px; height : 225px; padding-left: 0px; ">           
+            <div id="donut-charts" >Click two tags to compare</div>
+            </div>     
+            <br>   
+            <div id="main" >
+            <div id="lineChartHolder"></div>
+            <script src ="lineChart.js"></script>
+           
+            </div>
+            <br><br>
+			</aside>
+
+  </div> <!--! end of #container -->
+
+  <footer>
+    
+  </footer>
+
+</body>
+</html>
+

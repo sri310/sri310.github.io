@@ -1,0 +1,134 @@
+<!doctype html>  
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  
+  <title>Intelligent Viz</title>
+
+  <link rel="shortcut icon" href="/favicon.ico">
+ 	<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="stylesheet.css">
+   <link rel="stylesheet" href="colorChange.css">
+  <link href='https://fonts.googleapis.com/css?family=Caudex' rel='stylesheet'>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.3/modernizr.min.js"></script>
+  <script src ="bubbleChart.js"></script>
+  <style type="text/css">
+  body{
+    font-family: "Caudex";
+    background-image: url("wallpaper_7.jpg");
+  }
+
+  #main { 
+
+    width: 610px;    
+  }
+  #statsHolder   {  
+    width: 200px;
+    height: 290px;   
+    float: left;    
+    line-height: 30px;
+  }
+    #barChartHolder {
+    width: 400px;
+    background: #ffffff;
+    height: 390px;
+    float: left;
+    
+}
+#arrow{
+   height: 30px;
+   padding-top: 10px;
+   margin-top: auto;
+   margin-left: auto;
+    margin-right: auto;
+    width: 15em
+}
+
+.styleChange{
+  font-size: 20px;
+  padding-top: 100px;
+  color: skyblue;
+   
+}
+.statStyleClass{
+   color: skyblue;
+   font-size:32px;
+   padding-top: 100px;
+}
+
+   
+
+
+  </style>
+
+
+</head>
+
+<body class="cf" >
+
+  <header class="span2">
+  	<div class="inner cf">
+  		<h1 class="alt span1" style="font-size: 32px;">Taggit
+     </h1>
+  	<nav class="span1 col">
+			<ul class="cf">
+				<li><a class="alt active" href="#">Quality Viewer</a></li>
+				<li><a class="alt" href="tagComparator.html">Tag Comparator</a></li>
+        <li> <img src="stackOverflow.jpg" width ="170px" height="35px" /></li>
+				
+			</ul>
+		</nav>
+	</div>
+  </header>
+
+  <div id="container" class="cf">  
+
+  	<article class="span1">
+				<section>
+          
+           <svg width="600" height="600" font-family="sans-serif" font-size="10" text-anchor="middle"></svg>
+          <div id="chartHolder"> </div>
+          <svg id="svg"></svg>
+          <script src ="bubbleChart.js"></script>
+        </section>
+      
+			</article>
+
+			<aside class="span1 col">					
+           <div id ="questionDisplay"></div>
+
+                 
+           <div id="qDisplay" style="border : solid 1px #000000; background : #ffffff; color : #000000; padding : 4px; width : 600px; height : 120px; overflow-y : scroll ; overflow-x :hidden;" onscroll = "scrollMe()">
+            Questions will be displayed here 
+            </div>    
+
+             <div id = "arrow" style="font-family: caudex; color:skyblue;">
+            Prev
+           <img id ="leftArrow" class="arrowClass" src ="leftArrow.png" width = "20px" height = "20px" onclick = "displayDifferentQuestion(this)"/>
+           <img id ="rightArrow" class="arrowClass" src ="rightArrow.png" width = "20px" height = "20px" onclick = "displayDifferentQuestion(this)"/> 
+           Next
+         </div>
+            <br>   
+            <div id="main" >
+            <div id="barChartHolder" style="border : solid 1px #000000;"><svg id="svga" ></svg></div>
+            <div id ="statsHolder" class ="statStyleClass" style="border : solid 1px #000000;">Question stats will be displayed here</div>
+            </div>
+            <br>
+			</aside>
+
+  </div> <!--! end of #container -->
+
+  <footer>
+    
+  </footer>
+
+</body>
+</html>
+
